@@ -124,7 +124,6 @@ static const struct rd_kafka_property rd_kafka_properties[] = {
 #if defined(_MSC_VER)
                 { 0x40, "sasl_gssapi" },
 #endif
-#endif
 		{ 0, NULL }
 		}
 	},
