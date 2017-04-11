@@ -8,8 +8,7 @@
         "python",
         "zlib1g-dev",
         "libssl-dev",
-        "libsasl2-dev",
-        "liblz4-dev"
+        "libsasl2-dev"
       ],
       "buildcmd": [
         "./configure",
@@ -29,8 +28,7 @@
         "python",
         "zlib1g-dev",
         "libssl-dev",
-        "libsasl2-dev",
-        "liblz4-dev"
+        "libsasl2-dev"
       ],
       "buildcmd": [
         "./configure",
@@ -50,8 +48,7 @@
         "python",
         "zlib1g-dev",
         "libssl-dev",
-        "libsasl2-dev",
-        "liblz4-dev"
+        "libsasl2-dev"
       ],
       "buildcmd": [
         "./configure",
@@ -74,7 +71,6 @@
         "zlib1g-dev",
         "libssl-dev",
         "libsasl2-dev",
-        "liblz4-dev",
         "cmake"
       ],
       "buildcmd": [

@@ -12,7 +12,9 @@ endif
 SRCS_$(WITH_SASL) += rdkafka_sasl.c rdkafka_sasl_cyrus.c
 SRCS_$(WITH_SNAPPY) += snappy.c
 SRCS_$(WITH_ZLIB) += rdgz.c
-SRCS_$(WITH_LZ4) += xxhash.c
+
+SRCS_LZ4 = xxhash.c lz4.c lz4frame.c lz4hc.c
+SRCS_y += $(SRCS_LZ4)
 
 ifeq ($(HAVE_REGEX), n)
 SRCS_y += regexp.c
@@ -52,6 +54,9 @@ check: file-check
 install: lib-install
 
 clean: lib-clean
+
+# Compile LZ4 with -O3
+$(SRCS_LZ4:.c=.o): CFLAGS:=$(CFLAGS) -O3
 
 ifeq ($(WITH_LDS),y)
 # Enable linker script if supported by platform
